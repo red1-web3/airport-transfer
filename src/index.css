@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  @apply font-poppins;
+}
+
+@layer components {
+  .container-md {
+    @apply xl:w-[1100px] xl:mx-auto px-8 xl:px-0;
+  }
+  .container-rmv {
+    @apply xl:w-full xl:mx-auto px-0 xl:px-0;
+  }
+}
+.animationTop {
+  animation: fromTop 50ms linear;
+}
+@keyframes fromTop {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.carWrapper .swiper-slide-active img {
+  @apply md:!scale-75 md:!duration-200;
+}
+.carWrapper .swiper-slide-next + div img {
+  @apply md:!scale-75 md:!duration-200;
+}
+.footerTitleStyle {
+  @apply font-semibold md:text-3xl lg:text-4xl text-2xl text-white;
+}
+
+.headerBottom {
+  position: fixed;
+  left: 0;
+  z-index: 40;
+  transition: all 300ms;
+  top: 0;
+  width: 100%;
+  @apply bg-[#4fbee6] shadow-md;
+}
+.headerBottom .anchor{
+  @apply !text-white
+}
+.headerBottom .LOGO{
+  @apply text-white
+}
+.headerBottom .mobileBar{
+  @apply !text-white
+}
+.active {
+  /* background: red !important; */
+  @apply border-primaryColor bg-primaryColor !text-white before:!bg-primaryColor;
+}
+
+.npmSelect > input {
+  @apply bg-slate-200 p-3 outline-none rounded-r-sm;
+}
+.phoneInpt{
+  @apply !p-2
+}
+.phoneInpt > input {
+  @apply !bg-transparent !border-none;
+}
+
+.flag-dropdown {
+  @apply !bg-transparent !border-none focus:!outline-none;
+}
+.text-wihite{
+  @apply !text-white
+}
+
+.lineClamp{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  -webkit-box-pack: end;
+}
+.opened{
+  @apply !bg-primaryColor !text-white
+}
+.default{
+  @apply bg-slate-200 text-secondayColor
+}
